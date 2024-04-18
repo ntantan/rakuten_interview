@@ -20,6 +20,7 @@ const DescriptionContainer = styled(Box)`
     gap: 8px;
     margin-right: 16px;
 `
+
 const ImageContainer = styled(Box)`
     margin-left: 16px;
 `
@@ -43,6 +44,7 @@ const NewPriceContainer = styled.div`
     color: #BF0000;
     font-weight: 700;
 `
+
 const NewPrice = styled.span`
     font-size: 20px;
 `
@@ -65,6 +67,7 @@ const UsedLabel = styled.span`
     align-self: flex-end;
     font-weight: 600;
 `
+
 const UsedPrice = styled.span`
     font-size: 20px;
     margin-left: 4px;
@@ -78,7 +81,6 @@ interface ProductTileProps {
 function ProductTile ({
     data
 }: ProductTileProps) {
-
     if (!data) {
         return null;
     }
@@ -99,8 +101,8 @@ function ProductTile ({
             <DescriptionContainer>
                 <Box>
                     <Link href={data.href} underline="none">
-                    <Brand>{data.brand}</Brand>
-                    <Title>{data.title}</Title>
+                        <Brand>{data.brand}</Brand>
+                        <Title>{data.title}</Title>
                     </Link>
                 </Box>
 
