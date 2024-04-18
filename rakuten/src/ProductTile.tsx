@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import styled from 'styled-components';
 import { DataType } from './App';
+import Link from '@mui/material/Link';
 
 const ProductContainer = styled(Box)`
     display: flex;
@@ -85,13 +86,22 @@ function ProductTile ({
     return (
         <ProductContainer>
             <ImageContainer>
-                <img src={data.image} alt="product" width={120} height={120}/>
+                <Link href={data.href}>
+                    <img 
+                        src={data.image}
+                        alt="product"
+                        width={120}
+                        height={120}
+                    />
+                </Link>
             </ImageContainer>
 
             <DescriptionContainer>
                 <Box>
+                    <Link href={data.href} underline="none">
                     <Brand>{data.brand}</Brand>
                     <Title>{data.title}</Title>
+                    </Link>
                 </Box>
 
                 <Box>
